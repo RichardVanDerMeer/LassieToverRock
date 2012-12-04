@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BandModel.h"
 
-@interface BandCellViewController : UIViewController
-
+@interface BandCellViewController : UITableViewCell
+{
+	BandModel *band;
+	UILabel *title;
+	UIImageView *imageView;
+}
+-(BandModel*)band;
+-(void)setBand:(BandModel*)myBand;
 @end
