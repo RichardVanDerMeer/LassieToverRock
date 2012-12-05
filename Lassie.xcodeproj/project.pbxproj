@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79E28D451667D14D001BBCCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D441667D14D001BBCCE /* UIKit.framework */; };
+		79E28D471667D14D001BBCCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D461667D14D001BBCCE /* Foundation.framework */; };
+		79E28D491667D14D001BBCCE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D481667D14D001BBCCE /* CoreGraphics.framework */; };
+		79E28D4B1667D14D001BBCCE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D4A1667D14D001BBCCE /* CoreData.framework */; };
+		79E28D511667D14D001BBCCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79E28D4F1667D14D001BBCCE /* InfoPlist.strings */; };
+		79E28D531667D14D001BBCCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28D521667D14D001BBCCE /* main.m */; };
+		79E28D571667D14D001BBCCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28D561667D14D001BBCCE /* AppDelegate.m */; };
+		79E28D591667D14D001BBCCE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28D581667D14D001BBCCE /* Default.png */; };
+		79E28D5B1667D14D001BBCCE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28D5A1667D14D001BBCCE /* Default@2x.png */; };
+		79E28D5D1667D14D001BBCCE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28D5C1667D14D001BBCCE /* Default-568h@2x.png */; };
+		79E28D681667D1D4001BBCCE /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28D671667D1D4001BBCCE /* SplashViewController.m */; };
+		79E28DB11667F1E1001BBCCE /* ProgrammaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DB01667F1E1001BBCCE /* ProgrammaViewController.m */; };
+		79E28DB41667FEAB001BBCCE /* BandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DB31667FEAB001BBCCE /* BandModel.m */; };
+		79E28DB71667FF71001BBCCE /* BandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DB61667FF71001BBCCE /* BandViewController.m */; };
+		79E28DBB166826A3001BBCCE /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DBA166826A3001BBCCE /* splash.jpg */; };
+		79E28DC11668B1E5001BBCCE /* BandCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DC01668B1E5001BBCCE /* BandCellViewController.m */; };
+		79E28DD71668B6FA001BBCCE /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DC41668B6FA001BBCCE /* MKAnnotationView+WebCache.m */; };
+		79E28DD81668B6FA001BBCCE /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DC61668B6FA001BBCCE /* SDImageCache.m */; };
+		79E28DD91668B6FA001BBCCE /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DCA1668B6FA001BBCCE /* SDWebImageDecoder.m */; };
+		79E28DDA1668B6FA001BBCCE /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DCC1668B6FA001BBCCE /* SDWebImageDownloader.m */; };
+		79E28DDB1668B6FA001BBCCE /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DCF1668B6FA001BBCCE /* SDWebImageManager.m */; };
+		79E28DDC1668B6FA001BBCCE /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DD21668B6FA001BBCCE /* SDWebImagePrefetcher.m */; };
+		79E28DDD1668B6FA001BBCCE /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DD41668B6FA001BBCCE /* UIButton+WebCache.m */; };
+		79E28DDE1668B6FA001BBCCE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DD61668B6FA001BBCCE /* UIImageView+WebCache.m */; };
+		79E28DE01668BB12001BBCCE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28DDF1668BB11001BBCCE /* ImageIO.framework */; };
+		79E28DE21668C08C001BBCCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28DE11668C08B001BBCCE /* MapKit.framework */; };
+		79E28DEE1668DEEF001BBCCE /* Lassie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DEC1668DEEF001BBCCE /* Lassie@2x.png */; };
+		79E28DEF1668DEEF001BBCCE /* Lassie.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DED1668DEEF001BBCCE /* Lassie.png */; };
+		79E28DF21668DF8E001BBCCE /* Programma@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DF01668DF8E001BBCCE /* Programma@2x.png */; };
+		79E28DF31668DF8E001BBCCE /* Programma.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DF11668DF8E001BBCCE /* Programma.png */; };
+		79E28DF71668E306001BBCCE /* PicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DF61668E305001BBCCE /* PicturesViewController.m */; };
+		79E28DFA1668E3CE001BBCCE /* Fotos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DF81668E3CE001BBCCE /* Fotos@2x.png */; };
+		79E28DFB1668E3CE001BBCCE /* Fotos.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DF91668E3CE001BBCCE /* Fotos.png */; };
+		79E28DFE1668E477001BBCCE /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DFD1668E477001BBCCE /* TwitterViewController.m */; };
+		79E28E011668E5D3001BBCCE /* Twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DFF1668E5D3001BBCCE /* Twitter@2x.png */; };
+		79E28E021668E5D3001BBCCE /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E001668E5D3001BBCCE /* Twitter.png */; };
+		79E28E051668FC59001BBCCE /* LassieToverRock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E031668FC59001BBCCE /* LassieToverRock@2x.png */; };
+		79E28E061668FC59001BBCCE /* LassieToverRock.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E041668FC59001BBCCE /* LassieToverRock.png */; };
+		79E28E081668FC6A001BBCCE /* LassieToverRock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */; };
+		79E28E0A1668FC6F001BBCCE /* LassieToverRock.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E091668FC6F001BBCCE /* LassieToverRock.png */; };
+		79E28E0C16690915001BBCCE /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E0B16690915001BBCCE /* placeholder.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		79E28D401667D14D001BBCCE /* Lassie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lassie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E28D441667D14D001BBCCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		79E28D461667D14D001BBCCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79E28D481667D14D001BBCCE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		79E28D4A1667D14D001BBCCE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		79E28D4E1667D14D001BBCCE /* Lassie ToverRock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lassie ToverRock-Info.plist"; sourceTree = "<group>"; };
+		79E28D501667D14D001BBCCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79E28D521667D14D001BBCCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79E28D541667D14D001BBCCE /* Lassie ToverRock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lassie ToverRock-Prefix.pch"; sourceTree = "<group>"; };
+		79E28D551667D14D001BBCCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		79E28D561667D14D001BBCCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		79E28D581667D14D001BBCCE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		79E28D5A1667D14D001BBCCE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/Default@2x.png"; sourceTree = "<group>"; };
+		79E28D5C1667D14D001BBCCE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		79E28D661667D1D4001BBCCE /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		79E28D671667D1D4001BBCCE /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		79E28DAF1667F1E1001BBCCE /* ProgrammaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammaViewController.h; sourceTree = "<group>"; };
+		79E28DB01667F1E1001BBCCE /* ProgrammaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammaViewController.m; sourceTree = "<group>"; };
+		79E28DB21667FEAB001BBCCE /* BandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandModel.h; sourceTree = "<group>"; };
+		79E28DB31667FEAB001BBCCE /* BandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BandModel.m; sourceTree = "<group>"; };
+		79E28DB51667FF71001BBCCE /* BandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandViewController.h; sourceTree = "<group>"; };
+		79E28DB61667FF71001BBCCE /* BandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BandViewController.m; sourceTree = "<group>"; };
+		79E28DBA166826A3001BBCCE /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = splash.jpg; path = images/splash.jpg; sourceTree = "<group>"; };
+		79E28DBF1668B1E5001BBCCE /* BandCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandCellViewController.h; sourceTree = "<group>"; };
+		79E28DC01668B1E5001BBCCE /* BandCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BandCellViewController.m; sourceTree = "<group>"; };
+		79E28DC31668B6FA001BBCCE /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		79E28DC41668B6FA001BBCCE /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		79E28DC51668B6FA001BBCCE /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		79E28DC61668B6FA001BBCCE /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		79E28DC71668B6FA001BBCCE /* SDImageCacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCacheDelegate.h; sourceTree = "<group>"; };
+		79E28DC81668B6FA001BBCCE /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		79E28DC91668B6FA001BBCCE /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		79E28DCA1668B6FA001BBCCE /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		79E28DCB1668B6FA001BBCCE /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		79E28DCC1668B6FA001BBCCE /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		79E28DCD1668B6FA001BBCCE /* SDWebImageDownloaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderDelegate.h; sourceTree = "<group>"; };
+		79E28DCE1668B6FA001BBCCE /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		79E28DCF1668B6FA001BBCCE /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		79E28DD01668B6FA001BBCCE /* SDWebImageManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManagerDelegate.h; sourceTree = "<group>"; };
+		79E28DD11668B6FA001BBCCE /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		79E28DD21668B6FA001BBCCE /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		79E28DD31668B6FA001BBCCE /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		79E28DD41668B6FA001BBCCE /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		79E28DD51668B6FA001BBCCE /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		79E28DD61668B6FA001BBCCE /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		79E28DDF1668BB11001BBCCE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		79E28DE11668C08B001BBCCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		79E28DEC1668DEEF001BBCCE /* Lassie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Lassie@2x.png"; path = "images/Lassie@2x.png"; sourceTree = "<group>"; };
+		79E28DED1668DEEF001BBCCE /* Lassie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lassie.png; path = images/Lassie.png; sourceTree = "<group>"; };
+		79E28DF01668DF8E001BBCCE /* Programma@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Programma@2x.png"; path = "images/Programma@2x.png"; sourceTree = "<group>"; };
+		79E28DF11668DF8E001BBCCE /* Programma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Programma.png; path = images/Programma.png; sourceTree = "<group>"; };
+		79E28DF51668E305001BBCCE /* PicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicturesViewController.h; sourceTree = "<group>"; };
+		79E28DF61668E305001BBCCE /* PicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesViewController.m; sourceTree = "<group>"; };
+		79E28DF81668E3CE001BBCCE /* Fotos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fotos@2x.png"; path = "images/Fotos@2x.png"; sourceTree = "<group>"; };
+		79E28DF91668E3CE001BBCCE /* Fotos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fotos.png; path = images/Fotos.png; sourceTree = "<group>"; };
+		79E28DFC1668E477001BBCCE /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
+		79E28DFD1668E477001BBCCE /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
+		79E28DFF1668E5D3001BBCCE /* Twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Twitter@2x.png"; path = "images/Twitter@2x.png"; sourceTree = "<group>"; };
+		79E28E001668E5D3001BBCCE /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter.png; path = images/Twitter.png; sourceTree = "<group>"; };
+		79E28E031668FC59001BBCCE /* LassieToverRock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LassieToverRock@2x.png"; path = "images/LassieToverRock@2x.png"; sourceTree = "<group>"; };
+		79E28E041668FC59001BBCCE /* LassieToverRock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LassieToverRock.png; path = images/LassieToverRock.png; sourceTree = "<group>"; };
+		79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LassieToverRock@2x.png"; path = "images/LassieToverRock@2x.png"; sourceTree = "<group>"; };
+		79E28E091668FC6F001BBCCE /* LassieToverRock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LassieToverRock.png; path = images/LassieToverRock.png; sourceTree = "<group>"; };
+		79E28E0B16690915001BBCCE /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = images/placeholder.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79E28D3D1667D14D001BBCCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79E28DE21668C08C001BBCCE /* MapKit.framework in Frameworks */,
+				79E28DE01668BB12001BBCCE /* ImageIO.framework in Frameworks */,
+				79E28D451667D14D001BBCCE /* UIKit.framework in Frameworks */,
+				79E28D471667D14D001BBCCE /* Foundation.framework in Frameworks */,
+				79E28D491667D14D001BBCCE /* CoreGraphics.framework in Frameworks */,
+				79E28D4B1667D14D001BBCCE /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79E28D351667D14D001BBCCE = {
+			isa = PBXGroup;
+			children = (
+				79E28D4C1667D14D001BBCCE /* Lassie ToverRock */,
+				79E28D431667D14D001BBCCE /* Frameworks */,
+				79E28D411667D14D001BBCCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79E28D411667D14D001BBCCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79E28D401667D14D001BBCCE /* Lassie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79E28D431667D14D001BBCCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79E28DE11668C08B001BBCCE /* MapKit.framework */,
+				79E28DDF1668BB11001BBCCE /* ImageIO.framework */,
+				79E28D441667D14D001BBCCE /* UIKit.framework */,
+				79E28D461667D14D001BBCCE /* Foundation.framework */,
+				79E28D481667D14D001BBCCE /* CoreGraphics.framework */,
+				79E28D4A1667D14D001BBCCE /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79E28D4C1667D14D001BBCCE /* Lassie ToverRock */ = {
+			isa = PBXGroup;
+			children = (
+				79E28DC21668B6FA001BBCCE /* SDWebImage */,
+				79E28D551667D14D001BBCCE /* AppDelegate.h */,
+				79E28D561667D14D001BBCCE /* AppDelegate.m */,
+				79E28D661667D1D4001BBCCE /* SplashViewController.h */,
+				79E28D671667D1D4001BBCCE /* SplashViewController.m */,
+				79E28DAF1667F1E1001BBCCE /* ProgrammaViewController.h */,
+				79E28DB01667F1E1001BBCCE /* ProgrammaViewController.m */,
+				79E28DF51668E305001BBCCE /* PicturesViewController.h */,
+				79E28DF61668E305001BBCCE /* PicturesViewController.m */,
+				79E28DFC1668E477001BBCCE /* TwitterViewController.h */,
+				79E28DFD1668E477001BBCCE /* TwitterViewController.m */,
+				79E28DF41668E2DD001BBCCE /* Band */,
+				79E28D4D1667D14D001BBCCE /* Supporting Files */,
+			);
+			path = "Lassie ToverRock";
+			sourceTree = "<group>";
+		};
+		79E28D4D1667D14D001BBCCE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79E28DE71668D2A1001BBCCE /* Images */,
+				79E28D4E1667D14D001BBCCE /* Lassie ToverRock-Info.plist */,
+				79E28D4F1667D14D001BBCCE /* InfoPlist.strings */,
+				79E28D521667D14D001BBCCE /* main.m */,
+				79E28D541667D14D001BBCCE /* Lassie ToverRock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79E28DC21668B6FA001BBCCE /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				79E28DC31668B6FA001BBCCE /* MKAnnotationView+WebCache.h */,
+				79E28DC41668B6FA001BBCCE /* MKAnnotationView+WebCache.m */,
+				79E28DC51668B6FA001BBCCE /* SDImageCache.h */,
+				79E28DC61668B6FA001BBCCE /* SDImageCache.m */,
+				79E28DC71668B6FA001BBCCE /* SDImageCacheDelegate.h */,
+				79E28DC81668B6FA001BBCCE /* SDWebImageCompat.h */,
+				79E28DC91668B6FA001BBCCE /* SDWebImageDecoder.h */,
+				79E28DCA1668B6FA001BBCCE /* SDWebImageDecoder.m */,
+				79E28DCB1668B6FA001BBCCE /* SDWebImageDownloader.h */,
+				79E28DCC1668B6FA001BBCCE /* SDWebImageDownloader.m */,
+				79E28DCD1668B6FA001BBCCE /* SDWebImageDownloaderDelegate.h */,
+				79E28DCE1668B6FA001BBCCE /* SDWebImageManager.h */,
+				79E28DCF1668B6FA001BBCCE /* SDWebImageManager.m */,
+				79E28DD01668B6FA001BBCCE /* SDWebImageManagerDelegate.h */,
+				79E28DD11668B6FA001BBCCE /* SDWebImagePrefetcher.h */,
+				79E28DD21668B6FA001BBCCE /* SDWebImagePrefetcher.m */,
+				79E28DD31668B6FA001BBCCE /* UIButton+WebCache.h */,
+				79E28DD41668B6FA001BBCCE /* UIButton+WebCache.m */,
+				79E28DD51668B6FA001BBCCE /* UIImageView+WebCache.h */,
+				79E28DD61668B6FA001BBCCE /* UIImageView+WebCache.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		79E28DE71668D2A1001BBCCE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				79E28E091668FC6F001BBCCE /* LassieToverRock.png */,
+				79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */,
+				79E28DF81668E3CE001BBCCE /* Fotos@2x.png */,
+				79E28DF91668E3CE001BBCCE /* Fotos.png */,
+				79E28DF01668DF8E001BBCCE /* Programma@2x.png */,
+				79E28DF11668DF8E001BBCCE /* Programma.png */,
+				79E28DEC1668DEEF001BBCCE /* Lassie@2x.png */,
+				79E28DED1668DEEF001BBCCE /* Lassie.png */,
+				79E28DFF1668E5D3001BBCCE /* Twitter@2x.png */,
+				79E28E001668E5D3001BBCCE /* Twitter.png */,
+				79E28E0B16690915001BBCCE /* placeholder.jpg */,
+				79E28DBA166826A3001BBCCE /* splash.jpg */,
+				79E28D581667D14D001BBCCE /* Default.png */,
+				79E28D5A1667D14D001BBCCE /* Default@2x.png */,
+				79E28D5C1667D14D001BBCCE /* Default-568h@2x.png */,
+				79E28E031668FC59001BBCCE /* LassieToverRock@2x.png */,
+				79E28E041668FC59001BBCCE /* LassieToverRock.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		79E28DF41668E2DD001BBCCE /* Band */ = {
+			isa = PBXGroup;
+			children = (
+				79E28DBF1668B1E5001BBCCE /* BandCellViewController.h */,
+				79E28DC01668B1E5001BBCCE /* BandCellViewController.m */,
+				79E28DB51667FF71001BBCCE /* BandViewController.h */,
+				79E28DB61667FF71001BBCCE /* BandViewController.m */,
+				79E28DB21667FEAB001BBCCE /* BandModel.h */,
+				79E28DB31667FEAB001BBCCE /* BandModel.m */,
+			);
+			name = Band;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79E28D3F1667D14D001BBCCE /* Lassie ToverRock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79E28D631667D14D001BBCCE /* Build configuration list for PBXNativeTarget "Lassie ToverRock" */;
+			buildPhases = (
+				79E28D3C1667D14D001BBCCE /* Sources */,
+				79E28D3D1667D14D001BBCCE /* Frameworks */,
+				79E28D3E1667D14D001BBCCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lassie ToverRock";
+			productName = "Lassie ToverRock";
+			productReference = 79E28D401667D14D001BBCCE /* Lassie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79E28D371667D14D001BBCCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Richard van der Meer";
+			};
+			buildConfigurationList = 79E28D3A1667D14D001BBCCE /* Build configuration list for PBXProject "Lassie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 79E28D351667D14D001BBCCE;
+			productRefGroup = 79E28D411667D14D001BBCCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79E28D3F1667D14D001BBCCE /* Lassie ToverRock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79E28D3E1667D14D001BBCCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79E28D511667D14D001BBCCE /* InfoPlist.strings in Resources */,
+				79E28D591667D14D001BBCCE /* Default.png in Resources */,
+				79E28D5B1667D14D001BBCCE /* Default@2x.png in Resources */,
+				79E28D5D1667D14D001BBCCE /* Default-568h@2x.png in Resources */,
+				79E28DBB166826A3001BBCCE /* splash.jpg in Resources */,
+				79E28DEE1668DEEF001BBCCE /* Lassie@2x.png in Resources */,
+				79E28DEF1668DEEF001BBCCE /* Lassie.png in Resources */,
+				79E28DF21668DF8E001BBCCE /* Programma@2x.png in Resources */,
+				79E28DF31668DF8E001BBCCE /* Programma.png in Resources */,
+				79E28DFA1668E3CE001BBCCE /* Fotos@2x.png in Resources */,
+				79E28DFB1668E3CE001BBCCE /* Fotos.png in Resources */,
+				79E28E011668E5D3001BBCCE /* Twitter@2x.png in Resources */,
+				79E28E021668E5D3001BBCCE /* Twitter.png in Resources */,
+				79E28E051668FC59001BBCCE /* LassieToverRock@2x.png in Resources */,
+				79E28E061668FC59001BBCCE /* LassieToverRock.png in Resources */,
+				79E28E081668FC6A001BBCCE /* LassieToverRock@2x.png in Resources */,
+				79E28E0A1668FC6F001BBCCE /* LassieToverRock.png in Resources */,
+				79E28E0C16690915001BBCCE /* placeholder.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79E28D3C1667D14D001BBCCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79E28D531667D14D001BBCCE /* main.m in Sources */,
+				79E28D571667D14D001BBCCE /* AppDelegate.m in Sources */,
+				79E28D681667D1D4001BBCCE /* SplashViewController.m in Sources */,
+				79E28DB11667F1E1001BBCCE /* ProgrammaViewController.m in Sources */,
+				79E28DB41667FEAB001BBCCE /* BandModel.m in Sources */,
+				79E28DB71667FF71001BBCCE /* BandViewController.m in Sources */,
+				79E28DC11668B1E5001BBCCE /* BandCellViewController.m in Sources */,
+				79E28DD71668B6FA001BBCCE /* MKAnnotationView+WebCache.m in Sources */,
+				79E28DD81668B6FA001BBCCE /* SDImageCache.m in Sources */,
+				79E28DD91668B6FA001BBCCE /* SDWebImageDecoder.m in Sources */,
+				79E28DDA1668B6FA001BBCCE /* SDWebImageDownloader.m in Sources */,
+				79E28DDB1668B6FA001BBCCE /* SDWebImageManager.m in Sources */,
+				79E28DDC1668B6FA001BBCCE /* SDWebImagePrefetcher.m in Sources */,
+				79E28DDD1668B6FA001BBCCE /* UIButton+WebCache.m in Sources */,
+				79E28DDE1668B6FA001BBCCE /* UIImageView+WebCache.m in Sources */,
+				79E28DF71668E306001BBCCE /* PicturesViewController.m in Sources */,
+				79E28DFE1668E477001BBCCE /* TwitterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		79E28D4F1667D14D001BBCCE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79E28D501667D14D001BBCCE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79E28D611667D14D001BBCCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		79E28D621667D14D001BBCCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79E28D641667D14D001BBCCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Lassie ToverRock/grabKit/externalLibraries/Facebook\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lassie ToverRock/Lassie ToverRock-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				INFOPLIST_FILE = "Lassie ToverRock/Lassie ToverRock-Info.plist";
+				PRODUCT_NAME = Lassie;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		79E28D651667D14D001BBCCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Lassie ToverRock/grabKit/externalLibraries/Facebook\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lassie ToverRock/Lassie ToverRock-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "/usr/include/libxml2/**";
+				INFOPLIST_FILE = "Lassie ToverRock/Lassie ToverRock-Info.plist";
+				PRODUCT_NAME = Lassie;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79E28D3A1667D14D001BBCCE /* Build configuration list for PBXProject "Lassie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79E28D611667D14D001BBCCE /* Debug */,
+				79E28D621667D14D001BBCCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79E28D631667D14D001BBCCE /* Build configuration list for PBXNativeTarget "Lassie ToverRock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79E28D641667D14D001BBCCE /* Debug */,
+				79E28D651667D14D001BBCCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79E28D371667D14D001BBCCE /* Project object */;
+}
