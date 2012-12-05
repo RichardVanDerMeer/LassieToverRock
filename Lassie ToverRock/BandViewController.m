@@ -73,8 +73,20 @@
 	// Recalculate frame size
 	[rootView setContentSize:CGSizeMake(self.view.bounds.size.width, description.contentSize.height + 230)];
 	
-	
-	
+	// Add external link
+	if (![band.URL isEqualToString:@""]) {
+		UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Website" style:UIBarButtonItemStylePlain target:self action:@selector(gotoWebsite)];
+		
+		self.navigationItem.rightBarButtonItem = rightButton;
+	}
+}
+
+-(void)gotoWebsite
+{
+	if (band.URL != @"") {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:band.URL]];
+	}
+
 }
 
 - (void)viewDidLoad
