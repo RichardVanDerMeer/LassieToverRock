@@ -50,6 +50,7 @@
 		79E28E0C16690915001BBCCE /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E0B16690915001BBCCE /* placeholder.jpg */; };
 		EB1DD382166F6FF80013EABB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DD381166F6FF80013EABB /* Social.framework */; };
 		EB1DD384166F71260013EABB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DD383166F71260013EABB /* Accounts.framework */; };
+		EB1DD387166F9DC70013EABB /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1DD386166F9DC60013EABB /* TweetCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,8 @@
 		79E28E0B16690915001BBCCE /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = images/placeholder.jpg; sourceTree = "<group>"; };
 		EB1DD381166F6FF80013EABB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EB1DD383166F71260013EABB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		EB1DD385166F9DC60013EABB /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
+		EB1DD386166F9DC60013EABB /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,7 @@
 				79E28DF61668E305001BBCCE /* PicturesViewController.m */,
 				79E28DFC1668E477001BBCCE /* TwitterViewController.h */,
 				79E28DFD1668E477001BBCCE /* TwitterViewController.m */,
+				EB1DD388166F9E1B0013EABB /* Twitter */,
 				79E28DF41668E2DD001BBCCE /* Band */,
 				79E28D4D1667D14D001BBCCE /* Supporting Files */,
 			);
@@ -266,6 +270,15 @@
 				79E28DB31667FEAB001BBCCE /* BandModel.m */,
 			);
 			name = Band;
+			sourceTree = "<group>";
+		};
+		EB1DD388166F9E1B0013EABB /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				EB1DD385166F9DC60013EABB /* TweetCell.h */,
+				EB1DD386166F9DC60013EABB /* TweetCell.m */,
+			);
+			name = Twitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +377,7 @@
 				79E28DDE1668B6FA001BBCCE /* UIImageView+WebCache.m in Sources */,
 				79E28DF71668E306001BBCCE /* PicturesViewController.m in Sources */,
 				79E28DFE1668E477001BBCCE /* TwitterViewController.m in Sources */,
+				EB1DD387166F9DC70013EABB /* TweetCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
