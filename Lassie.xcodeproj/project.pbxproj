@@ -48,6 +48,8 @@
 		79E28E081668FC6A001BBCCE /* LassieToverRock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */; };
 		79E28E0A1668FC6F001BBCCE /* LassieToverRock.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E091668FC6F001BBCCE /* LassieToverRock.png */; };
 		79E28E0C16690915001BBCCE /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E0B16690915001BBCCE /* placeholder.jpg */; };
+		EB1DD382166F6FF80013EABB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DD381166F6FF80013EABB /* Social.framework */; };
+		EB1DD384166F71260013EABB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DD383166F71260013EABB /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,8 @@
 		79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LassieToverRock@2x.png"; path = "images/LassieToverRock@2x.png"; sourceTree = "<group>"; };
 		79E28E091668FC6F001BBCCE /* LassieToverRock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LassieToverRock.png; path = images/LassieToverRock.png; sourceTree = "<group>"; };
 		79E28E0B16690915001BBCCE /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = images/placeholder.jpg; sourceTree = "<group>"; };
+		EB1DD381166F6FF80013EABB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		EB1DD383166F71260013EABB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1DD384166F71260013EABB /* Accounts.framework in Frameworks */,
+				EB1DD382166F6FF80013EABB /* Social.framework in Frameworks */,
 				79E28DE21668C08C001BBCCE /* MapKit.framework in Frameworks */,
 				79E28DE01668BB12001BBCCE /* ImageIO.framework in Frameworks */,
 				79E28D451667D14D001BBCCE /* UIKit.framework in Frameworks */,
@@ -154,6 +160,8 @@
 		79E28D431667D14D001BBCCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB1DD383166F71260013EABB /* Accounts.framework */,
+				EB1DD381166F6FF80013EABB /* Social.framework */,
 				79E28DE11668C08B001BBCCE /* MapKit.framework */,
 				79E28DDF1668BB11001BBCCE /* ImageIO.framework */,
 				79E28D441667D14D001BBCCE /* UIKit.framework */,

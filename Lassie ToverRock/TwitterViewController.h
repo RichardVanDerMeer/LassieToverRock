@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface TwitterViewController : UITableViewController
-
+    @property (strong, nonatomic) id timeline;
 @end

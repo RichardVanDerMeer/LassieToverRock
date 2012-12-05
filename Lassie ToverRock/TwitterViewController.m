@@ -38,10 +38,70 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self fetchTimeLine];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)fetchTimeLine
+{
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    
+    [accountStore requestAccessToAccountsWithType:accountType
+                                          options:nil
+                                       completion:^(BOOL granted, NSError *error) {
+                                           
+        if(!granted){
+            NSLog(@"Gebruiker geeft geen toestemming tot zijn Twitter account.");
+        } else {
+            NSArray *twitterAccounts = [accountStore accountsWithAccountType:accountType];
+    
+            if([twitterAccounts count] > 0){
+                ACAccount *account = [twitterAccounts objectAtIndex:0];
+            
+                NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+                [params setObject:@"#LTR2013" forKey:@"q"];
+                [params setObject:@"10" forKey:@"count"];
+
+                NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json"];
+
+                SLRequest *request  = [SLRequest requestForServiceType:SLServiceTypeTwitter
+                                                         requestMethod:SLRequestMethodGET
+                                                                   URL:url
+                                                            parameters:params];
+                
+                [request setAccount:account];
+
+                [request performRequestWithHandler:
+                 ^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+                     if (responseData) {
+                         //  Use the NSJSONSerialization class to parse the returned JSON
+                         NSError *jsonError;
+                         
+                         self.timeline = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                             options:NSJSONReadingMutableLeaves
+                                                                               error:&jsonError];
+                         if (self.timeline) {
+                             // We have an object that we can parse
+                             NSLog(@"%@", self.timeline);
+                             [self.tableView reloadData];
+                         }
+                         else {
+                             // Inspect the contents of jsonError
+                             NSLog(@"%@", jsonError);
+                         }
+                     }
+                }];
+            }
+        }
+    }];
 }
 
 #pragma mark - Table view data source
@@ -50,22 +110,28 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[self.timeline objectForKey:@"statuses"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+	if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	}
     
-    // Configure the cell...
+    id tweet = [[self.timeline objectForKey:@"statuses"] objectAtIndex:[indexPath row]];
+    
+    [[cell textLabel] setText:[tweet objectForKey:@"text"]];
     
     return cell;
 }
