@@ -52,7 +52,8 @@
 		[self updateUIWithDictionary: json];
 	});
 	
-	// Create a imageView for each entry
+	
+	C
 
 }
 
