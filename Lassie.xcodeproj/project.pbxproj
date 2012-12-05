@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79721794166FF23400D38C15 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79721793166FF23400D38C15 /* ThumbnailView.m */; };
+		7972179D166FFA2700D38C15 /* FullImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7972179C166FFA2700D38C15 /* FullImageViewController.m */; };
 		79E28D451667D14D001BBCCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D441667D14D001BBCCE /* UIKit.framework */; };
 		79E28D471667D14D001BBCCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D461667D14D001BBCCE /* Foundation.framework */; };
 		79E28D491667D14D001BBCCE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D481667D14D001BBCCE /* CoreGraphics.framework */; };
@@ -53,6 +55,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79721792166FF23400D38C15 /* ThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailView.h; sourceTree = "<group>"; };
+		79721793166FF23400D38C15 /* ThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailView.m; sourceTree = "<group>"; };
+		7972179B166FFA2700D38C15 /* FullImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullImageViewController.h; sourceTree = "<group>"; };
+		7972179C166FFA2700D38C15 /* FullImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullImageViewController.m; sourceTree = "<group>"; };
 		79E28D401667D14D001BBCCE /* Lassie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lassie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E28D441667D14D001BBCCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		79E28D461667D14D001BBCCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -140,6 +146,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79721790166FF20000D38C15 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				79721792166FF23400D38C15 /* ThumbnailView.h */,
+				79721793166FF23400D38C15 /* ThumbnailView.m */,
+				7972179B166FFA2700D38C15 /* FullImageViewController.h */,
+				7972179C166FFA2700D38C15 /* FullImageViewController.m */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
 		79E28D351667D14D001BBCCE = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +203,7 @@
 				79E28DF61668E305001BBCCE /* PicturesViewController.m */,
 				79E28DFC1668E477001BBCCE /* TwitterViewController.h */,
 				79E28DFD1668E477001BBCCE /* TwitterViewController.m */,
+				79721790166FF20000D38C15 /* Pictures */,
 				79E28DF41668E2DD001BBCCE /* Band */,
 				79E28D4D1667D14D001BBCCE /* Supporting Files */,
 			);
@@ -364,6 +382,8 @@
 				79E28DDE1668B6FA001BBCCE /* UIImageView+WebCache.m in Sources */,
 				79E28DF71668E306001BBCCE /* PicturesViewController.m in Sources */,
 				79E28DFE1668E477001BBCCE /* TwitterViewController.m in Sources */,
+				79721794166FF23400D38C15 /* ThumbnailView.m in Sources */,
+				7972179D166FFA2700D38C15 /* FullImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

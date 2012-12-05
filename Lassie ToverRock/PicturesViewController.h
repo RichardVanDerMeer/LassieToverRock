@@ -10,7 +10,7 @@
 
 @interface PicturesViewController : UIViewController
 {
-	
 	UIScrollView *rootView;
+	NSMutableArray *pictures;
 }
 @end
