@@ -8,6 +8,8 @@
 
 #import "PicturesViewController.h"
 #import "UIImageView+WebCache.h"
+#import "ThumbnailView.h"
+#import "FullImageViewController.h"
 
 @interface PicturesViewController ()
 
@@ -27,6 +29,8 @@
 		
 		rootView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
 		[self setView:rootView];
+		
+		pictures = [[NSMutableArray alloc] init];
 
     }
     return self;
@@ -51,8 +55,6 @@
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[self updateUIWithDictionary: json];
 	});
-	
-	// Create a imageView for each entry
 
 }
 
@@ -66,13 +68,24 @@
 			top = ((i / 3) * 105) + 5;
 			
 			// Add image
-			UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(left, top, 100, 100)];
+			ThumbnailView *imageView = [[ThumbnailView alloc] initWithFrame:CGRectMake(left, top, 100, 100)];
 			[imageView setContentMode:UIViewContentModeScaleAspectFill];
 			[imageView setBounds:CGRectMake(10, 10, 100, 100)];
 			[imageView setClipsToBounds:true];
 			[rootView addSubview:imageView];
 			[imageView setImageWithURL:[NSURL URLWithString: json[@"images"][i][@"imageSmall"]]
 					  placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
+			imageView.imageLarge = json[@"images"][i][@"imageLarge"];
+			
+			
+			imageView.userInteractionEnabled = YES;
+			
+			UITapGestureRecognizer *tapGR;
+			tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+			tapGR.numberOfTapsRequired = 1;
+			[imageView addGestureRecognizer:tapGR];
+			
+			[pictures addObject:imageView];
 			
 		}
 		
@@ -87,6 +100,17 @@
                           otherButtonTitles: nil] show];
         NSLog(@"Exception: %@", exception);
     }
+}
+
+// Add a delegate method to handle the tap and do something with it.
+-(void)handleTap:(UITapGestureRecognizer *)sender
+{
+	if (sender.state == UIGestureRecognizerStateEnded) {
+		FullImageViewController *image = [[FullImageViewController alloc] init];
+		ThumbnailView *thumb = (ThumbnailView *)[pictures objectAtIndex:[pictures indexOfObject:sender.view]];
+		image.imageLarge = thumb.imageLarge;
+		[self.navigationController pushViewController:image animated:YES];
+	}
 }
 
 - (void)didReceiveMemoryWarning

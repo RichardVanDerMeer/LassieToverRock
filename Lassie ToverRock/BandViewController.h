@@ -19,4 +19,5 @@
 }
 -(BandModel*)band;
 -(void)setBand:(BandModel*)myBand;
+-(void)gotoWebsite;
 @end

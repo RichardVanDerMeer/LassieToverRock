@@ -37,7 +37,7 @@
 {
     [super viewDidLoad];
 	
-	NSData *programmaData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.lassietoverrock.nl/app/bands.php"]];
+	NSData *programmaData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.lassietoverrock.nl/app/bands.php"] options:NSDataReadingUncached error:nil];
 	
 	NSDictionary *json = nil;
 	if (programmaData) {
