@@ -7,6 +7,7 @@
 //
 
 #import "TwitterViewController.h"
+#import "Tweet.h"
 
 @interface TwitterViewController ()
 
@@ -21,8 +22,11 @@
         // Set the TabBar item
 		UITabBarItem *tbi = [self tabBarItem];
 		[tbi setImage:[UIImage imageNamed:@"Twitter.png"]];
-		self.title = @"Praat mee";
 		[tbi setTitle:@"Twitter"];
+        
+        self.title = @"Praat mee";
+        
+        tweets = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -31,6 +35,8 @@
 {
     [super viewDidLoad];
 
+    [self fetchTimeLine];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -40,7 +46,7 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    [self fetchTimeLine];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,18 +84,23 @@
                                                             parameters:params];
                 
                 [request setAccount:account];
-
                 [request performRequestWithHandler:
                  ^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
                      if (responseData) {
                          NSError *jsonError;
 
-                         self.timeline = [NSJSONSerialization JSONObjectWithData:responseData
-                                                                             options:NSJSONReadingMutableLeaves
-                                                                               error:&jsonError];
-                         if (self.timeline) {
-                             NSLog(@"%@", self.timeline);
-                             [self.tableView reloadData];
+                         NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                                  options:NSJSONReadingMutableLeaves
+                                                                                    error:&jsonError];
+                         NSDictionary *items = [jsonData objectForKey:@"statuses"];
+                         if (items) {
+                             for (NSDictionary *item in items) {
+                                 Tweet *tweet = [[Tweet alloc] initWithTweetData:item];
+                                 [tweets addObject:tweet];
+                             }
+                             dispatch_async(dispatch_get_main_queue(), ^{
+                                 [self.tableView reloadData];
+                             });
                          }
                          else {
                              NSLog(@"%@", jsonError);
@@ -110,7 +121,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self.timeline objectForKey:@"statuses"] count];
+    return [tweets count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -122,9 +133,7 @@
         cell = [[TweetCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
 	}
     
-    id tweet = [[self.timeline objectForKey:@"statuses"] objectAtIndex:[indexPath row]];
-
-    cell.detailTextLabel.text = [tweet objectForKey:@"text"];
+    cell.tweet = [tweets objectAtIndex:indexPath.item];
 
     return cell;
 }

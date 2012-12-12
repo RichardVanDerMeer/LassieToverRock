@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 @interface TweetCell: UITableViewCell
 {
     UILabel *titleLabel;
-    UITextView *contentTextView;
+    UILabel *bodyTextLabel;
 }
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *content;
+@property (nonatomic, retain) Tweet *tweet;
 
 @end

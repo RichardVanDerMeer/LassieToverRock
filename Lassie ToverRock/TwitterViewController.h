@@ -13,5 +13,7 @@
 #import "TweetCell.h"
 
 @interface TwitterViewController : UITableViewController
-    @property (strong, nonatomic) id timeline;
+{
+    NSMutableArray *tweets;
+}
 @end
