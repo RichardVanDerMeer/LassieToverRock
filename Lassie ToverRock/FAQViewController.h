@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FAQViewController : UITableViewController
-
+{
+	NSMutableArray *faq;
+}
 @end
