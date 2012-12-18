@@ -61,6 +61,7 @@
 			band.URL = json[@"bands"][i][@"url"];
 			band.imageSmall = json[@"bands"][i][@"imageSmall"];
 			band.imageLarge = json[@"bands"][i][@"imageLarge"];
+			band.startAndEndTime = json[@"bands"][i][@"time"];
 			[programma addObject:band];
 		}
 		[self.tableView reloadData];

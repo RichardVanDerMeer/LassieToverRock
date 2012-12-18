@@ -20,6 +20,12 @@
 		title.font = [UIFont boldSystemFontOfSize:16.0f];
 		[self addSubview:title];
 		
+		// Add start and end time
+		startAndEndTime = [[UILabel alloc] initWithFrame:CGRectMake(120, 10, self.contentView.bounds.size.width, 20)];
+		startAndEndTime.font = [UIFont boldSystemFontOfSize:10.0f];
+		startAndEndTime.textColor = [UIColor grayColor];
+		[self addSubview:startAndEndTime];
+		
 		// Add image
 		imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 100, 75)];
 		[imageView setContentMode:UIViewContentModeScaleAspectFill];
@@ -41,6 +47,9 @@
 	
 	// Set title
 	[title setText:band.name];
+	
+	// Set start and end time
+	[startAndEndTime setText:band.startAndEndTime];
 	
 	// Set image
 	[imageView setImageWithURL:[NSURL URLWithString:band.imageSmall]

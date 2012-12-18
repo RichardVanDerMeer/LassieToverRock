@@ -13,6 +13,7 @@
 {
 	BandModel *band;
 	UILabel *title;
+	UILabel *startAndEndTime;
 	UIImageView *imageView;
 }
 -(BandModel*)band;

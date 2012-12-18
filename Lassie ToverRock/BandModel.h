@@ -15,5 +15,6 @@
 @property (nonatomic) NSString *URL;
 @property (nonatomic) NSString *imageSmall;
 @property (nonatomic) NSString *imageLarge;
+@property (nonatomic) NSString *startAndEndTime;
 
 @end
