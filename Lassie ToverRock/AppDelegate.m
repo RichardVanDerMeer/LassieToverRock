@@ -11,6 +11,9 @@
 #import "ProgrammaViewController.h"
 #import "PicturesViewController.h"
 #import "TwitterViewController.h"
+#import "LocationViewController.h"
+#import "FAQViewController.h"
+#import "AboutViewController.h"
 
 @implementation AppDelegate
 
@@ -32,12 +35,21 @@
 	
 	TwitterViewController *twitterViewController = [[TwitterViewController alloc] init];
 	UINavigationController *twitterNavigationController = [[UINavigationController alloc] initWithRootViewController:twitterViewController];
+	
+	LocationViewController *locationViewController = [[LocationViewController alloc] init];
+	UINavigationController *locationNavigationController = [[UINavigationController alloc] initWithRootViewController:locationViewController];
+	
+	FAQViewController *faqViewController = [[FAQViewController alloc] init];
+	UINavigationController *faqNavigationController = [[UINavigationController alloc] initWithRootViewController:faqViewController];
+	
+	AboutViewController *aboutViewController = [[AboutViewController alloc] init];
+	UINavigationController *aboutNavigationController = [[UINavigationController alloc] initWithRootViewController:aboutViewController];
 
 	[[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:246.0f/255.0f green:139.0f/255.0f blue:31.0f/255.0f alpha:1.0f]];
 	
 		
 	UITabBarController *tabBarController = [[UITabBarController alloc] init];
-	NSArray *viewControllers = [NSArray arrayWithObjects:splashViewController, programmaNavigationController, picturesNavigationController, twitterNavigationController, nil];
+	NSArray *viewControllers = [NSArray arrayWithObjects:splashViewController, programmaNavigationController, picturesNavigationController, twitterNavigationController, locationNavigationController, faqNavigationController, aboutNavigationController, nil];
 	[tabBarController setViewControllers:viewControllers];
 	
 	[[self window] setRootViewController:tabBarController];

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		796AD32C1680A65200EE9F02 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796AD32B1680A65200EE9F02 /* LocationViewController.m */; };
+		796AD3301680A80D00EE9F02 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796AD32F1680A80D00EE9F02 /* FAQViewController.m */; };
+		796AD3361680ACC200EE9F02 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 796AD3351680ACC200EE9F02 /* AboutViewController.m */; };
+		796AD33B1680AFAC00EE9F02 /* faq.png in Resources */ = {isa = PBXBuildFile; fileRef = 796AD3371680AFAC00EE9F02 /* faq.png */; };
+		796AD33C1680AFAC00EE9F02 /* faq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796AD3381680AFAC00EE9F02 /* faq@2x.png */; };
+		796AD33D1680AFAC00EE9F02 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 796AD3391680AFAC00EE9F02 /* location.png */; };
+		796AD33E1680AFAC00EE9F02 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796AD33A1680AFAC00EE9F02 /* location@2x.png */; };
 		79721794166FF23400D38C15 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79721793166FF23400D38C15 /* ThumbnailView.m */; };
 		7972179D166FFA2700D38C15 /* FullImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7972179C166FFA2700D38C15 /* FullImageViewController.m */; };
 		79E28D451667D14D001BBCCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D441667D14D001BBCCE /* UIKit.framework */; };
@@ -55,6 +62,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		796AD32A1680A65200EE9F02 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		796AD32B1680A65200EE9F02 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		796AD32E1680A80D00EE9F02 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
+		796AD32F1680A80D00EE9F02 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
+		796AD3341680ACC200EE9F02 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		796AD3351680ACC200EE9F02 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		796AD3371680AFAC00EE9F02 /* faq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = faq.png; path = images/faq.png; sourceTree = "<group>"; };
+		796AD3381680AFAC00EE9F02 /* faq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "faq@2x.png"; path = "images/faq@2x.png"; sourceTree = "<group>"; };
+		796AD3391680AFAC00EE9F02 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = images/location.png; sourceTree = "<group>"; };
+		796AD33A1680AFAC00EE9F02 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "location@2x.png"; path = "images/location@2x.png"; sourceTree = "<group>"; };
 		79721792166FF23400D38C15 /* ThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailView.h; sourceTree = "<group>"; };
 		79721793166FF23400D38C15 /* ThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailView.m; sourceTree = "<group>"; };
 		7972179B166FFA2700D38C15 /* FullImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullImageViewController.h; sourceTree = "<group>"; };
@@ -203,6 +220,12 @@
 				79E28DF61668E305001BBCCE /* PicturesViewController.m */,
 				79E28DFC1668E477001BBCCE /* TwitterViewController.h */,
 				79E28DFD1668E477001BBCCE /* TwitterViewController.m */,
+				796AD32A1680A65200EE9F02 /* LocationViewController.h */,
+				796AD32B1680A65200EE9F02 /* LocationViewController.m */,
+				796AD32E1680A80D00EE9F02 /* FAQViewController.h */,
+				796AD32F1680A80D00EE9F02 /* FAQViewController.m */,
+				796AD3341680ACC200EE9F02 /* AboutViewController.h */,
+				796AD3351680ACC200EE9F02 /* AboutViewController.m */,
 				79721790166FF20000D38C15 /* Pictures */,
 				79E28DF41668E2DD001BBCCE /* Band */,
 				79E28D4D1667D14D001BBCCE /* Supporting Files */,
@@ -261,6 +284,10 @@
 				79E28DEC1668DEEF001BBCCE /* Lassie@2x.png */,
 				79E28DED1668DEEF001BBCCE /* Lassie.png */,
 				79E28DFF1668E5D3001BBCCE /* Twitter@2x.png */,
+				796AD3371680AFAC00EE9F02 /* faq.png */,
+				796AD3381680AFAC00EE9F02 /* faq@2x.png */,
+				796AD3391680AFAC00EE9F02 /* location.png */,
+				796AD33A1680AFAC00EE9F02 /* location@2x.png */,
 				79E28E001668E5D3001BBCCE /* Twitter.png */,
 				79E28E0B16690915001BBCCE /* placeholder.jpg */,
 				79E28DBA166826A3001BBCCE /* splash.jpg */,
@@ -355,6 +382,10 @@
 				79E28E081668FC6A001BBCCE /* LassieToverRock@2x.png in Resources */,
 				79E28E0A1668FC6F001BBCCE /* LassieToverRock.png in Resources */,
 				79E28E0C16690915001BBCCE /* placeholder.jpg in Resources */,
+				796AD33B1680AFAC00EE9F02 /* faq.png in Resources */,
+				796AD33C1680AFAC00EE9F02 /* faq@2x.png in Resources */,
+				796AD33D1680AFAC00EE9F02 /* location.png in Resources */,
+				796AD33E1680AFAC00EE9F02 /* location@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +415,9 @@
 				79E28DFE1668E477001BBCCE /* TwitterViewController.m in Sources */,
 				79721794166FF23400D38C15 /* ThumbnailView.m in Sources */,
 				7972179D166FFA2700D38C15 /* FullImageViewController.m in Sources */,
+				796AD32C1680A65200EE9F02 /* LocationViewController.m in Sources */,
+				796AD3301680A80D00EE9F02 /* FAQViewController.m in Sources */,
+				796AD3361680ACC200EE9F02 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
