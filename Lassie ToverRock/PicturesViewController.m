@@ -23,8 +23,8 @@
         // Set the TabBar item
 		UITabBarItem *tbi = [self tabBarItem];
 		[tbi setImage:[UIImage imageNamed:@"Fotos.png"]];
+		self.title = @"Foto's 2012";
 		[tbi setTitle:@"Foto's"];
-		self.title = @"Foto's";
 		
 		rootView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
 		[self setView:rootView];
