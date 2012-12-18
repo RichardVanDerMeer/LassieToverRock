@@ -50,8 +50,10 @@
 		79E28E081668FC6A001BBCCE /* LassieToverRock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */; };
 		79E28E0A1668FC6F001BBCCE /* LassieToverRock.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E091668FC6F001BBCCE /* LassieToverRock.png */; };
 		79E28E0C16690915001BBCCE /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E0B16690915001BBCCE /* placeholder.jpg */; };
+		EB1B1F1A1677A03A00AEACAB /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1B1F191677A03A00AEACAB /* Tweet.m */; };
 		EB1DD382166F6FF80013EABB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DD381166F6FF80013EABB /* Social.framework */; };
 		EB1DD384166F71260013EABB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DD383166F71260013EABB /* Accounts.framework */; };
+		EB1DD387166F9DC70013EABB /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1DD386166F9DC60013EABB /* TweetCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,8 +125,12 @@
 		79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LassieToverRock@2x.png"; path = "images/LassieToverRock@2x.png"; sourceTree = "<group>"; };
 		79E28E091668FC6F001BBCCE /* LassieToverRock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LassieToverRock.png; path = images/LassieToverRock.png; sourceTree = "<group>"; };
 		79E28E0B16690915001BBCCE /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = images/placeholder.jpg; sourceTree = "<group>"; };
+		EB1B1F181677A03A00AEACAB /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		EB1B1F191677A03A00AEACAB /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		EB1DD381166F6FF80013EABB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EB1DD383166F71260013EABB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		EB1DD385166F9DC60013EABB /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
+		EB1DD386166F9DC60013EABB /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,7 @@
 				79E28DF61668E305001BBCCE /* PicturesViewController.m */,
 				79E28DFC1668E477001BBCCE /* TwitterViewController.h */,
 				79E28DFD1668E477001BBCCE /* TwitterViewController.m */,
+				EB1DD388166F9E1B0013EABB /* Twitter */,
 				79721790166FF20000D38C15 /* Pictures */,
 				79E28DF41668E2DD001BBCCE /* Band */,
 				79E28D4D1667D14D001BBCCE /* Supporting Files */,
@@ -284,6 +291,17 @@
 				79E28DB31667FEAB001BBCCE /* BandModel.m */,
 			);
 			name = Band;
+			sourceTree = "<group>";
+		};
+		EB1DD388166F9E1B0013EABB /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				EB1B1F181677A03A00AEACAB /* Tweet.h */,
+				EB1B1F191677A03A00AEACAB /* Tweet.m */,
+				EB1DD385166F9DC60013EABB /* TweetCell.h */,
+				EB1DD386166F9DC60013EABB /* TweetCell.m */,
+			);
+			name = Twitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,8 +400,10 @@
 				79E28DDE1668B6FA001BBCCE /* UIImageView+WebCache.m in Sources */,
 				79E28DF71668E306001BBCCE /* PicturesViewController.m in Sources */,
 				79E28DFE1668E477001BBCCE /* TwitterViewController.m in Sources */,
+				EB1DD387166F9DC70013EABB /* TweetCell.m in Sources */,
 				79721794166FF23400D38C15 /* ThumbnailView.m in Sources */,
 				7972179D166FFA2700D38C15 /* FullImageViewController.m in Sources */,
+				EB1B1F1A1677A03A00AEACAB /* Tweet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
