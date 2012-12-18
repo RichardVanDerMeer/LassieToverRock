@@ -76,7 +76,7 @@
 
 -(void)viewImage:(int)page
 {
-	if (page >= 0 && page <= [pictureViews count]) {
+	if (page >= 0 && page < [pictureViews count]) {
 		UIImageView *view = [pictureViews objectAtIndex:page];
 		[view setImageWithURL:[NSURL URLWithString:[[pictures objectAtIndex:page] imageLarge]]];
 	}
