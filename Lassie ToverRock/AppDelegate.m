@@ -49,7 +49,7 @@
 	
 		
 	UITabBarController *tabBarController = [[UITabBarController alloc] init];
-	NSArray *viewControllers = [NSArray arrayWithObjects:splashViewController, programmaNavigationController, picturesNavigationController, twitterNavigationController, locationNavigationController, faqNavigationController, aboutNavigationController, nil];
+	NSArray *viewControllers = [NSArray arrayWithObjects:splashViewController, programmaNavigationController, picturesNavigationController, twitterNavigationController, faqNavigationController, locationNavigationController, aboutNavigationController, nil];
 	[tabBarController setViewControllers:viewControllers];
 	
 	[[self window] setRootViewController:tabBarController];

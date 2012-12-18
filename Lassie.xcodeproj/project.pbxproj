@@ -16,6 +16,10 @@
 		796AD33E1680AFAC00EE9F02 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796AD33A1680AFAC00EE9F02 /* location@2x.png */; };
 		79721794166FF23400D38C15 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79721793166FF23400D38C15 /* ThumbnailView.m */; };
 		7972179D166FFA2700D38C15 /* FullImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7972179C166FFA2700D38C15 /* FullImageViewController.m */; };
+		79C0B3521680C0BD007C2FCC /* schalmei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79C0B3511680C0BD007C2FCC /* schalmei.jpg */; };
+		79C0B3561680CEBA007C2FCC /* FAQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0B3551680CEBA007C2FCC /* FAQModel.m */; };
+		79C0B3591680D6A5007C2FCC /* FAQCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0B3581680D6A5007C2FCC /* FAQCell.m */; };
+		79C0B35C1680DA0F007C2FCC /* FAQDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0B35B1680DA0F007C2FCC /* FAQDetailViewController.m */; };
 		79E28D451667D14D001BBCCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D441667D14D001BBCCE /* UIKit.framework */; };
 		79E28D471667D14D001BBCCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D461667D14D001BBCCE /* Foundation.framework */; };
 		79E28D491667D14D001BBCCE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D481667D14D001BBCCE /* CoreGraphics.framework */; };
@@ -78,6 +82,14 @@
 		79721793166FF23400D38C15 /* ThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailView.m; sourceTree = "<group>"; };
 		7972179B166FFA2700D38C15 /* FullImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullImageViewController.h; sourceTree = "<group>"; };
 		7972179C166FFA2700D38C15 /* FullImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullImageViewController.m; sourceTree = "<group>"; };
+		79C0B34E1680BAF3007C2FCC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		79C0B3511680C0BD007C2FCC /* schalmei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = schalmei.jpg; path = images/schalmei.jpg; sourceTree = "<group>"; };
+		79C0B3541680CEBA007C2FCC /* FAQModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQModel.h; sourceTree = "<group>"; };
+		79C0B3551680CEBA007C2FCC /* FAQModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQModel.m; sourceTree = "<group>"; };
+		79C0B3571680D6A5007C2FCC /* FAQCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQCell.h; sourceTree = "<group>"; };
+		79C0B3581680D6A5007C2FCC /* FAQCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQCell.m; sourceTree = "<group>"; };
+		79C0B35A1680DA0F007C2FCC /* FAQDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQDetailViewController.h; sourceTree = "<group>"; };
+		79C0B35B1680DA0F007C2FCC /* FAQDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQDetailViewController.m; sourceTree = "<group>"; };
 		79E28D401667D14D001BBCCE /* Lassie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lassie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E28D441667D14D001BBCCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		79E28D461667D14D001BBCCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -180,6 +192,19 @@
 			name = Pictures;
 			sourceTree = "<group>";
 		};
+		79C0B3531680CE8F007C2FCC /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				79C0B3541680CEBA007C2FCC /* FAQModel.h */,
+				79C0B3551680CEBA007C2FCC /* FAQModel.m */,
+				79C0B3571680D6A5007C2FCC /* FAQCell.h */,
+				79C0B3581680D6A5007C2FCC /* FAQCell.m */,
+				79C0B35A1680DA0F007C2FCC /* FAQDetailViewController.h */,
+				79C0B35B1680DA0F007C2FCC /* FAQDetailViewController.m */,
+			);
+			name = FAQ;
+			sourceTree = "<group>";
+		};
 		79E28D351667D14D001BBCCE = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +225,7 @@
 		79E28D431667D14D001BBCCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79C0B34E1680BAF3007C2FCC /* CoreLocation.framework */,
 				EB1DD383166F71260013EABB /* Accounts.framework */,
 				EB1DD381166F6FF80013EABB /* Social.framework */,
 				79E28DE11668C08B001BBCCE /* MapKit.framework */,
@@ -235,6 +261,7 @@
 				EB1DD388166F9E1B0013EABB /* Twitter */,
 				79721790166FF20000D38C15 /* Pictures */,
 				79E28DF41668E2DD001BBCCE /* Band */,
+				79C0B3531680CE8F007C2FCC /* FAQ */,
 				79E28D4D1667D14D001BBCCE /* Supporting Files */,
 			);
 			path = "Lassie ToverRock";
@@ -288,6 +315,7 @@
 				79E28DF91668E3CE001BBCCE /* Fotos.png */,
 				79E28DF01668DF8E001BBCCE /* Programma@2x.png */,
 				79E28DF11668DF8E001BBCCE /* Programma.png */,
+				79C0B3511680C0BD007C2FCC /* schalmei.jpg */,
 				79E28DEC1668DEEF001BBCCE /* Lassie@2x.png */,
 				79E28DED1668DEEF001BBCCE /* Lassie.png */,
 				79E28DFF1668E5D3001BBCCE /* Twitter@2x.png */,
@@ -404,6 +432,7 @@
 				796AD33C1680AFAC00EE9F02 /* faq@2x.png in Resources */,
 				796AD33D1680AFAC00EE9F02 /* location.png in Resources */,
 				796AD33E1680AFAC00EE9F02 /* location@2x.png in Resources */,
+				79C0B3521680C0BD007C2FCC /* schalmei.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +467,9 @@
 				796AD3301680A80D00EE9F02 /* FAQViewController.m in Sources */,
 				796AD3361680ACC200EE9F02 /* AboutViewController.m in Sources */,
 				EB1B1F1A1677A03A00AEACAB /* Tweet.m in Sources */,
+				79C0B3561680CEBA007C2FCC /* FAQModel.m in Sources */,
+				79C0B3591680D6A5007C2FCC /* FAQCell.m in Sources */,
+				79C0B35C1680DA0F007C2FCC /* FAQDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
