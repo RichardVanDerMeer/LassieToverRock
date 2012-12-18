@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FullImageViewController : UIViewController
+@interface FullImageViewController : UIViewController <UIScrollViewDelegate>
 {
-	UIImageView *imageView;
+	UIScrollView *rootView;
+	NSMutableArray *pictures;
+	NSMutableArray *pictureViews;
+	int currentPage;
 }
-	@property (nonatomic) NSString *imageLarge;
+@property (nonatomic) NSString *imageLarge;
+-(void)setPictures:(NSMutableArray*)myPictures;
+-(void)showPictures;
+-(void)gotoPage:(int)page;
+-(void)viewImage:(int)page;
 @end

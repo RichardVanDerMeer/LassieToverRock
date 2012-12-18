@@ -9,7 +9,6 @@
 #import "PicturesViewController.h"
 #import "UIImageView+WebCache.h"
 #import "ThumbnailView.h"
-#import "FullImageViewController.h"
 
 @interface PicturesViewController ()
 
@@ -31,6 +30,8 @@
 		[self setView:rootView];
 		
 		pictures = [[NSMutableArray alloc] init];
+		
+		currentImageIndex = 0;
 
     }
     return self;
@@ -91,6 +92,10 @@
 		
 		// Recalculate frame size
 		[rootView setContentSize:CGSizeMake(self.view.bounds.size.width, top + 105)];
+		
+		// Init detail view
+		image = [[FullImageViewController alloc] init];
+		[image setPictures:pictures];
 	}
 	@catch (NSException *exception) {
         [[[UIAlertView alloc] initWithTitle:@"Fout"
@@ -106,10 +111,10 @@
 -(void)handleTap:(UITapGestureRecognizer *)sender
 {
 	if (sender.state == UIGestureRecognizerStateEnded) {
-		FullImageViewController *image = [[FullImageViewController alloc] init];
-		ThumbnailView *thumb = (ThumbnailView *)[pictures objectAtIndex:[pictures indexOfObject:sender.view]];
-		image.imageLarge = thumb.imageLarge;
 		[self.navigationController pushViewController:image animated:YES];
+		[image showPictures];
+		currentImageIndex = [pictures indexOfObject:sender.view];
+		[image gotoPage:currentImageIndex];
 	}
 }
 

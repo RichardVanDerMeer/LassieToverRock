@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FullImageViewController.h"
 
 @interface PicturesViewController : UIViewController
 {
 	UIScrollView *rootView;
 	NSMutableArray *pictures;
+	int currentImageIndex;
+	FullImageViewController *image;
 }
 @end
