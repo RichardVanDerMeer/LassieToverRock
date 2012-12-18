@@ -30,7 +30,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+	UITextView *title = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, self.view.bounds.size.width - 20, 40)];
+	[title setFont:[UIFont boldSystemFontOfSize:16.0f ]];
+	[title setEditable:false];
+	[title setText:@"De Schalmei"];
+	[self.view addSubview:title];
+	
+	UITextView *description = [[UITextView alloc] initWithFrame:CGRectMake(10, 40, self.view.bounds.size.width - 20, 80)];
+	[description setFont:[UIFont systemFontOfSize:12.0f]];
+	[description setEditable:false];
+	[description setText:@"Van Weerden Poelmanstraat 11\n9254 CS Hurdegaryp\n0511 472126"];
+	[self.view addSubview:description];
+	
+	// Draw the splash image
+	UIImage *schalmeiImage = [UIImage imageNamed:@"schalmei.jpg"];
+	UIImageView *schalmeiImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 340, self.view.bounds.size.width, 300)];
+	schalmeiImageView.contentMode = UIViewContentModeScaleToFill;
+	schalmeiImageView.image = schalmeiImage;
+	[self.view addSubview:schalmeiImageView];
+	
+	
 }
 
 - (void)didReceiveMemoryWarning
