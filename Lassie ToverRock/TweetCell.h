@@ -13,6 +13,7 @@
 {
     UILabel *titleLabel;
     UILabel *bodyTextLabel;
+    UIImageView *profilePicture;
 }
 
 @property (strong, nonatomic) NSString *title;
