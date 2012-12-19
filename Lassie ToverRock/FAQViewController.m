@@ -24,8 +24,8 @@
         // Set the TabBar item
 		UITabBarItem *tbi = [self tabBarItem];
 		[tbi setImage:[UIImage imageNamed:@"faq.png"]];
-        [tbi setTitle:@"FAQ"];
-		self.title = @"FAQ";
+        [tbi setTitle:@"Vragen"];
+		self.title = @"Vragen";
 		
 		faq = [[NSMutableArray alloc] init];
     }

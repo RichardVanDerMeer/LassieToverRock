@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AboutViewController : UIViewController
-
+{
+	UIScrollView *rootView;
+	UITextView *about;
+	UIImageView *aboutImageView;
+}
 @end

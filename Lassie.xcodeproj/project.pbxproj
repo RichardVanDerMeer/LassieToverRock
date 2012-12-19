@@ -34,7 +34,6 @@
 		79E28DB11667F1E1001BBCCE /* ProgrammaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DB01667F1E1001BBCCE /* ProgrammaViewController.m */; };
 		79E28DB41667FEAB001BBCCE /* BandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DB31667FEAB001BBCCE /* BandModel.m */; };
 		79E28DB71667FF71001BBCCE /* BandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DB61667FF71001BBCCE /* BandViewController.m */; };
-		79E28DBB166826A3001BBCCE /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DBA166826A3001BBCCE /* splash.jpg */; };
 		79E28DC11668B1E5001BBCCE /* BandCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DC01668B1E5001BBCCE /* BandCellViewController.m */; };
 		79E28DD71668B6FA001BBCCE /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DC41668B6FA001BBCCE /* MKAnnotationView+WebCache.m */; };
 		79E28DD81668B6FA001BBCCE /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DC61668B6FA001BBCCE /* SDImageCache.m */; };
@@ -58,9 +57,9 @@
 		79E28E021668E5D3001BBCCE /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E001668E5D3001BBCCE /* Twitter.png */; };
 		79E28E051668FC59001BBCCE /* LassieToverRock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E031668FC59001BBCCE /* LassieToverRock@2x.png */; };
 		79E28E061668FC59001BBCCE /* LassieToverRock.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E041668FC59001BBCCE /* LassieToverRock.png */; };
-		79E28E081668FC6A001BBCCE /* LassieToverRock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */; };
-		79E28E0A1668FC6F001BBCCE /* LassieToverRock.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E091668FC6F001BBCCE /* LassieToverRock.png */; };
 		79E28E0C16690915001BBCCE /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79E28E0B16690915001BBCCE /* placeholder.jpg */; };
+		79EEF4F31681D911001EEB69 /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79EEF4F21681D911001EEB69 /* about.jpg */; };
+		79EEF4F81681EDCD001EEB69 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 79EEF4F71681EDCC001EEB69 /* splash.png */; };
 		EB1B1F1A1677A03A00AEACAB /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1B1F191677A03A00AEACAB /* Tweet.m */; };
 		EB1DD382166F6FF80013EABB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DD381166F6FF80013EABB /* Social.framework */; };
 		EB1DD384166F71260013EABB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1DD383166F71260013EABB /* Accounts.framework */; };
@@ -112,7 +111,6 @@
 		79E28DB31667FEAB001BBCCE /* BandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BandModel.m; sourceTree = "<group>"; };
 		79E28DB51667FF71001BBCCE /* BandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandViewController.h; sourceTree = "<group>"; };
 		79E28DB61667FF71001BBCCE /* BandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BandViewController.m; sourceTree = "<group>"; };
-		79E28DBA166826A3001BBCCE /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = splash.jpg; path = images/splash.jpg; sourceTree = "<group>"; };
 		79E28DBF1668B1E5001BBCCE /* BandCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandCellViewController.h; sourceTree = "<group>"; };
 		79E28DC01668B1E5001BBCCE /* BandCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BandCellViewController.m; sourceTree = "<group>"; };
 		79E28DC31668B6FA001BBCCE /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -154,6 +152,11 @@
 		79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LassieToverRock@2x.png"; path = "images/LassieToverRock@2x.png"; sourceTree = "<group>"; };
 		79E28E091668FC6F001BBCCE /* LassieToverRock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LassieToverRock.png; path = images/LassieToverRock.png; sourceTree = "<group>"; };
 		79E28E0B16690915001BBCCE /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = images/placeholder.jpg; sourceTree = "<group>"; };
+		79EEF4F21681D911001EEB69 /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about.jpg; sourceTree = "<group>"; };
+		79EEF4F51681EDBD001EEB69 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		79EEF4F71681EDCC001EEB69 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		79EEF4F91681EDEC001EEB69 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/Default@2x.png"; sourceTree = "<group>"; };
+		79EEF4FB1681EE08001EEB69 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
 		EB1B1F181677A03A00AEACAB /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		EB1B1F191677A03A00AEACAB /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		EB1DD381166F6FF80013EABB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -309,6 +312,9 @@
 		79E28DE71668D2A1001BBCCE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				79EEF4F91681EDEC001EEB69 /* Default@2x.png */,
+				79EEF4F51681EDBD001EEB69 /* Default.png */,
+				79EEF4F71681EDCC001EEB69 /* splash.png */,
 				79E28E091668FC6F001BBCCE /* LassieToverRock.png */,
 				79E28E071668FC6A001BBCCE /* LassieToverRock@2x.png */,
 				79E28DF81668E3CE001BBCCE /* Fotos@2x.png */,
@@ -316,7 +322,9 @@
 				79E28DF01668DF8E001BBCCE /* Programma@2x.png */,
 				79E28DF11668DF8E001BBCCE /* Programma.png */,
 				79C0B3511680C0BD007C2FCC /* schalmei.jpg */,
+				79EEF4FB1681EE08001EEB69 /* Default-568h@2x.png */,
 				79E28DEC1668DEEF001BBCCE /* Lassie@2x.png */,
+				79EEF4F21681D911001EEB69 /* about.jpg */,
 				79E28DED1668DEEF001BBCCE /* Lassie.png */,
 				79E28DFF1668E5D3001BBCCE /* Twitter@2x.png */,
 				796AD3371680AFAC00EE9F02 /* faq.png */,
@@ -325,7 +333,6 @@
 				796AD33A1680AFAC00EE9F02 /* location@2x.png */,
 				79E28E001668E5D3001BBCCE /* Twitter.png */,
 				79E28E0B16690915001BBCCE /* placeholder.jpg */,
-				79E28DBA166826A3001BBCCE /* splash.jpg */,
 				79E28D581667D14D001BBCCE /* Default.png */,
 				79E28D5A1667D14D001BBCCE /* Default@2x.png */,
 				79E28D5C1667D14D001BBCCE /* Default-568h@2x.png */,
@@ -414,7 +421,6 @@
 				79E28D591667D14D001BBCCE /* Default.png in Resources */,
 				79E28D5B1667D14D001BBCCE /* Default@2x.png in Resources */,
 				79E28D5D1667D14D001BBCCE /* Default-568h@2x.png in Resources */,
-				79E28DBB166826A3001BBCCE /* splash.jpg in Resources */,
 				79E28DEE1668DEEF001BBCCE /* Lassie@2x.png in Resources */,
 				79E28DEF1668DEEF001BBCCE /* Lassie.png in Resources */,
 				79E28DF21668DF8E001BBCCE /* Programma@2x.png in Resources */,
@@ -425,14 +431,14 @@
 				79E28E021668E5D3001BBCCE /* Twitter.png in Resources */,
 				79E28E051668FC59001BBCCE /* LassieToverRock@2x.png in Resources */,
 				79E28E061668FC59001BBCCE /* LassieToverRock.png in Resources */,
-				79E28E081668FC6A001BBCCE /* LassieToverRock@2x.png in Resources */,
-				79E28E0A1668FC6F001BBCCE /* LassieToverRock.png in Resources */,
 				79E28E0C16690915001BBCCE /* placeholder.jpg in Resources */,
 				796AD33B1680AFAC00EE9F02 /* faq.png in Resources */,
 				796AD33C1680AFAC00EE9F02 /* faq@2x.png in Resources */,
 				796AD33D1680AFAC00EE9F02 /* location.png in Resources */,
 				796AD33E1680AFAC00EE9F02 /* location@2x.png in Resources */,
 				79C0B3521680C0BD007C2FCC /* schalmei.jpg in Resources */,
+				79EEF4F31681D911001EEB69 /* about.jpg in Resources */,
+				79EEF4F81681EDCD001EEB69 /* splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +563,7 @@
 		79E28D651667D14D001BBCCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Lassie ToverRock/grabKit/externalLibraries/Facebook\"",
@@ -566,6 +573,7 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "/usr/include/libxml2/**";
 				INFOPLIST_FILE = "Lassie ToverRock/Lassie ToverRock-Info.plist";
 				PRODUCT_NAME = Lassie;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -23,7 +23,7 @@
     if (self) {
         // Set the TabBar item
 		UITabBarItem *tbi = [self tabBarItem];
-		[tbi setImage:[UIImage imageNamed:@"programma.png"]];
+		[tbi setImage:[UIImage imageNamed:@"Programma.png"]];
 		[tbi setTitle:@"Programma"];
 		self.title = @"Programma";
 		

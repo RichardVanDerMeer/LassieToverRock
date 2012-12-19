@@ -24,7 +24,7 @@
 		[tbi setTitle:@"Lassie"];
 		
 		// Draw the splash image
-		UIImage *splashImage = [UIImage imageNamed:@"splash.jpg"];
+		UIImage *splashImage = [UIImage imageNamed:@"splash.png"];
 		UIImageView *splashImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
 		splashImageView.contentMode = UIViewContentModeScaleAspectFill;
 		splashImageView.image = splashImage;
