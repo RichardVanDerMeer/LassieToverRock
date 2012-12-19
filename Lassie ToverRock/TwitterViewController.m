@@ -73,7 +73,7 @@
                 ACAccount *account = [twitterAccounts objectAtIndex:0];
             
                 NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-                [params setObject:@"#LTR2013" forKey:@"q"];
+                [params setObject:@"A32" forKey:@"q"];
                 [params setObject:@"50" forKey:@"count"];
 
                 NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json"];
@@ -140,7 +140,16 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 95;
+    CGFloat height = 95.0f;
+    
+    Tweet *tweet = [tweets objectAtIndex:indexPath.item];
+    
+    CGSize tileSize = [tweet.bodyText sizeWithFont:[UIFont systemFontOfSize:12.0f]
+                                 constrainedToSize:CGSizeMake((self.view.bounds.size.width - 90), FLT_MAX)];
+    
+    height = tileSize.height + 24.0f;
+    
+    return height;
 }
 
 /*
