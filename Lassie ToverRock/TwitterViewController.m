@@ -36,12 +36,6 @@
     [super viewDidLoad];
 
     [self fetchTimeLine];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -73,7 +67,7 @@
                 ACAccount *account = [twitterAccounts objectAtIndex:0];
             
                 NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-                [params setObject:@"A32" forKey:@"q"];
+                [params setObject:@"#ltr2013" forKey:@"q"];
                 [params setObject:@"50" forKey:@"count"];
 
                 NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json"];
@@ -147,7 +141,7 @@
     CGSize tileSize = [tweet.bodyText sizeWithFont:[UIFont systemFontOfSize:12.0f]
                                  constrainedToSize:CGSizeMake((self.view.bounds.size.width - 90), FLT_MAX)];
     
-    height = tileSize.height + 24.0f;
+    height = MAX(tileSize.height + 24.0f, 60);
     
     return height;
 }
