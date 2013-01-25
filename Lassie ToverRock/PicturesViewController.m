@@ -9,6 +9,7 @@
 #import "PicturesViewController.h"
 #import "UIImageView+WebCache.h"
 #import "ThumbnailView.h"
+#import "GAI.h"
 
 @interface PicturesViewController ()
 
@@ -40,7 +41,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+	id<GAITracker> googleTracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-28275692-2"];
+	[googleTracker trackView:@"Afbeeldingen"];
 	
 	// Fetch JSON of all images
 	NSData *pictureData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.lassietoverrock.nl/app/images.php"]];

@@ -13,6 +13,7 @@
 {
     UILabel *titleLabel;
     UILabel *bodyTextLabel;
+	UILabel *dateLabel;
     UIImageView *profilePicture;
 }
 

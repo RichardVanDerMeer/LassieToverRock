@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
-
 #import "TweetCell.h"
 
 @interface TwitterViewController : UITableViewController

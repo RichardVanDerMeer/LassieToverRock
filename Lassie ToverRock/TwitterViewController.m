@@ -8,6 +8,8 @@
 
 #import "TwitterViewController.h"
 #import "Tweet.h"
+#import "DejalActivityView.h"
+#import "GAI.h"
 
 @interface TwitterViewController ()
 
@@ -25,6 +27,11 @@
 		[tbi setTitle:@"Twitter"];
         
         self.title = @"Praat mee";
+		
+		// Compose new tweet
+		UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(showTweetSheet)];
+		self.navigationItem.rightBarButtonItem = rightButton;
+		
         
         tweets = [[NSMutableArray alloc] init];
     }
@@ -34,6 +41,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	
+	id<GAITracker> googleTracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-28275692-2"];
+	[googleTracker trackView:@"Twitter"];
+	
+	UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+	[refreshControl addTarget:self action:@selector(refresh)
+			 forControlEvents:UIControlEventValueChanged];
+	self.refreshControl = refreshControl;
 
     [self fetchTimeLine];
 }
@@ -43,6 +59,11 @@
     
 }
 
+-(void)refresh {
+	
+	[self fetchTimeLine];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -50,7 +71,7 @@
 }
 
 - (void)fetchTimeLine
-{
+{	
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     
@@ -68,7 +89,7 @@
             
                 NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
                 [params setObject:@"#ltr2013" forKey:@"q"];
-                [params setObject:@"50" forKey:@"count"];
+                [params setObject:@"250" forKey:@"count"];
 
                 NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json"];
 
@@ -82,15 +103,17 @@
                  ^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
                      if (responseData) {
                          NSError *jsonError;
-
+						 
                          NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:responseData
                                                                                   options:NSJSONReadingMutableLeaves
                                                                                     error:&jsonError];
                          NSDictionary *items = [jsonData objectForKey:@"statuses"];
                          if (items) {
+							 [tweets removeAllObjects];
                              for (NSDictionary *item in items) {
-                                 Tweet *tweet = [[Tweet alloc] initWithTweetData:item];
-                                 [tweets addObject:tweet];
+								 
+								 Tweet *tweet = [[Tweet alloc] initWithTweetData:item];
+								 [tweets addObject:tweet];
                              }
                              dispatch_async(dispatch_get_main_queue(), ^{
                                  [self.tableView reloadData];
@@ -100,10 +123,62 @@
                              NSLog(@"%@", jsonError);
                          }
                      }
+					 
+					 [self.refreshControl endRefreshing];
                 }];
             }
         }
     }];
+}
+
+- (void)showTweetSheet
+{
+	//  Create an instance of the Tweet Sheet
+	SLComposeViewController *tweetSheet = [SLComposeViewController
+										   composeViewControllerForServiceType:
+										   SLServiceTypeTwitter];
+	
+	// Sets the completion handler.  Note that we don't know which thread the
+	// block will be called on, so we need to ensure that any UI updates occur
+	// on the main queue
+	tweetSheet.completionHandler = ^(SLComposeViewControllerResult result) {
+		switch(result) {
+				//  This means the user cancelled without sending the Tweet
+			case SLComposeViewControllerResultCancelled:
+				break;
+				//  This means the user hit 'Send'
+			case SLComposeViewControllerResultDone:
+				break;
+		}
+		
+		//  dismiss the Tweet Sheet
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[self dismissViewControllerAnimated:NO completion:^{
+				NSLog(@"Tweet Sheet has been dismissed.");
+			}];
+		});
+	};
+	
+	//  Set the initial body of the Tweet
+	[tweetSheet setInitialText:@"#ltr2013 "];
+	
+	/*
+	//  Adds an image to the Tweet.  For demo purposes, assume we have an
+	//  image named 'larry.png' that we wish to attach
+	if (![tweetSheet addImage:[UIImage imageNamed:@"larry.png"]]) {
+		NSLog(@"Unable to add the image!");
+	}
+	 */
+	
+	//  Add an URL to the Tweet.  You can add multiple URLs.
+	if (![tweetSheet addURL:[NSURL URLWithString:@"http://lassietoverrock.nl/"]]){
+		NSLog(@"Unable to add the URL!");
+	}
+	
+	//  Presents the Tweet Sheet to the user
+	[self presentViewController:tweetSheet animated:NO completion:^{
+		NSLog(@"Tweet sheet has been presented.");
+	}];
 }
 
 #pragma mark - Table view data source
@@ -141,61 +216,17 @@
     CGSize tileSize = [tweet.bodyText sizeWithFont:[UIFont systemFontOfSize:12.0f]
                                  constrainedToSize:CGSizeMake((self.view.bounds.size.width - 90), FLT_MAX)];
     
-    height = MAX(tileSize.height + 24.0f, 60);
+    height = MAX(tileSize.height + 40.0f, 60);
     
     return height;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+	return ;
 }
 
 @end

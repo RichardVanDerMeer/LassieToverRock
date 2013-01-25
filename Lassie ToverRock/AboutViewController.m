@@ -7,6 +7,7 @@
 //
 
 #import "AboutViewController.h"
+#import "GAI.h"
 
 @interface AboutViewController ()
 
@@ -50,6 +51,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	
+	id<GAITracker> googleTracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-28275692-2"];
+	[googleTracker trackView:@"About"];
 	
 	NSData *programmaData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.lassietoverrock.nl/app/static.php"] options:NSDataReadingUncached error:nil];
 	

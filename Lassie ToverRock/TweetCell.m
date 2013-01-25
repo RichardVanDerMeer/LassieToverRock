@@ -16,10 +16,12 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 5, (self.contentView.bounds.size.width - 90), 14)];
-		bodyTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 19, (self.contentView.bounds.size.width - 90), 60)];
+		dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 5, (self.contentView.bounds.size.width - 90), 10)];
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 16, (self.contentView.bounds.size.width - 90), 14)];
+		bodyTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 32, (self.contentView.bounds.size.width - 90), 60)];
 		profilePicture = [[UIImageView alloc] initWithFrame:CGRectMake(6, 6, 48, 48)];
 		
+		[self addSubview:dateLabel];
 		[self addSubview:profilePicture];
 		[self addSubview:titleLabel];
 		[self addSubview:bodyTextLabel];
@@ -37,6 +39,14 @@
 
 - (void)setTweet:(Tweet *) _tweet{
     
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+	[formatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+	NSString *formattedDate = [formatter stringFromDate:_tweet.createdAt];
+	
+	dateLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
+	dateLabel.font = [UIFont systemFontOfSize:10.0f];
+	dateLabel.textColor = [UIColor grayColor];
+	
     titleLabel.text = _tweet.username;
     titleLabel.font = [UIFont boldSystemFontOfSize:12.0f];
     // titleLabel.backgroundColor = [UIColor blueColor];
@@ -52,7 +62,7 @@
 	
 	CGRect frame = bodyTextLabel.frame;
 	frame.size.height = tileSize.height;
-	frame.origin.y = 20;
+	frame.origin.y = 32;
 	bodyTextLabel.frame = frame;
     
     [profilePicture setContentMode:UIViewContentModeScaleAspectFit];

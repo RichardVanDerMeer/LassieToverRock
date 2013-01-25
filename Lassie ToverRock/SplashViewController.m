@@ -7,6 +7,7 @@
 //
 
 #import "SplashViewController.h"
+#import "GAI.h"
 
 @interface SplashViewController ()
 
@@ -37,13 +38,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	id<GAITracker> googleTracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-28275692-2"];
+	[googleTracker trackView:@"Splash"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -19,6 +19,12 @@
     return _profileImage;
 }
 
+- (NSString *)tweetID
+{
+	_tweetID = [NSString stringWithFormat:@"%@", [self.data valueForKeyPath:@"id_str"]];
+    return _tweetID;
+}
+
 - (NSString*) username
 {
     if (_username == nil) {

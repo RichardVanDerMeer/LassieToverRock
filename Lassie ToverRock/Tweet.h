@@ -10,6 +10,7 @@
 
 @interface Tweet : NSObject
 
+@property (strong, nonatomic) NSString *tweetID;
 @property (strong, nonatomic) NSDate *createdAt;
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *bodyText;

@@ -10,6 +10,7 @@
 #import "FAQModel.h"
 #import "FAQCell.h"
 #import "FAQDetailViewController.h"
+#import "GAI.h"
 
 @interface FAQViewController ()
 
@@ -35,6 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	
+	id<GAITracker> googleTracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-28275692-2"];
+	[googleTracker trackView:@"FAQ"];
 
     NSData *programmaData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.lassietoverrock.nl/app/faq.php"] options:NSDataReadingUncached error:nil];
 	

@@ -14,6 +14,7 @@
 #import "LocationViewController.h"
 #import "FAQViewController.h"
 #import "AboutViewController.h"
+#import "GAI.h"
 
 @implementation AppDelegate
 
@@ -53,6 +54,11 @@
 	[tabBarController setViewControllers:viewControllers];
 	
 	[[self window] setRootViewController:tabBarController];
+	
+	[GAI sharedInstance].trackUncaughtExceptions = YES;
+	[GAI sharedInstance].dispatchInterval = 20;
+	[GAI sharedInstance].debug = NO;
+	id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-28275692-2"];
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

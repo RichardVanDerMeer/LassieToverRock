@@ -20,6 +20,10 @@
 		79C0B3561680CEBA007C2FCC /* FAQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0B3551680CEBA007C2FCC /* FAQModel.m */; };
 		79C0B3591680D6A5007C2FCC /* FAQCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0B3581680D6A5007C2FCC /* FAQCell.m */; };
 		79C0B35C1680DA0F007C2FCC /* FAQDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0B35B1680DA0F007C2FCC /* FAQDetailViewController.m */; };
+		79DCB565168731D40014F345 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28DE11668C08B001BBCCE /* MapKit.framework */; };
+		79DCB567168733840014F345 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DCB55916872D480014F345 /* DejalActivityView.m */; };
+		79DCB5721687D14C0014F345 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DCB5701687D1200014F345 /* SystemConfiguration.framework */; };
+		79DCB5731687D1780014F345 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DCB56F1687CEA60014F345 /* libGoogleAnalytics.a */; };
 		79E28D451667D14D001BBCCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D441667D14D001BBCCE /* UIKit.framework */; };
 		79E28D471667D14D001BBCCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D461667D14D001BBCCE /* Foundation.framework */; };
 		79E28D491667D14D001BBCCE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28D481667D14D001BBCCE /* CoreGraphics.framework */; };
@@ -44,7 +48,6 @@
 		79E28DDD1668B6FA001BBCCE /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DD41668B6FA001BBCCE /* UIButton+WebCache.m */; };
 		79E28DDE1668B6FA001BBCCE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E28DD61668B6FA001BBCCE /* UIImageView+WebCache.m */; };
 		79E28DE01668BB12001BBCCE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28DDF1668BB11001BBCCE /* ImageIO.framework */; };
-		79E28DE21668C08C001BBCCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E28DE11668C08B001BBCCE /* MapKit.framework */; };
 		79E28DEE1668DEEF001BBCCE /* Lassie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DEC1668DEEF001BBCCE /* Lassie@2x.png */; };
 		79E28DEF1668DEEF001BBCCE /* Lassie.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DED1668DEEF001BBCCE /* Lassie.png */; };
 		79E28DF21668DF8E001BBCCE /* Programma@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E28DF01668DF8E001BBCCE /* Programma@2x.png */; };
@@ -89,7 +92,18 @@
 		79C0B3581680D6A5007C2FCC /* FAQCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQCell.m; sourceTree = "<group>"; };
 		79C0B35A1680DA0F007C2FCC /* FAQDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQDetailViewController.h; sourceTree = "<group>"; };
 		79C0B35B1680DA0F007C2FCC /* FAQDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQDetailViewController.m; sourceTree = "<group>"; };
-		79E28D401667D14D001BBCCE /* Lassie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lassie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79DCB55816872D480014F345 /* DejalActivityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		79DCB55916872D480014F345 /* DejalActivityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
+		79DCB55F1687308B0014F345 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		79DCB5691687CEA60014F345 /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		79DCB56A1687CEA60014F345 /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		79DCB56B1687CEA60014F345 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		79DCB56C1687CEA60014F345 /* GAITransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
+		79DCB56D1687CEA60014F345 /* GAITransactionItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
+		79DCB56E1687CEA60014F345 /* libGoogleAnalytics_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics_debug.a; sourceTree = "<group>"; };
+		79DCB56F1687CEA60014F345 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		79DCB5701687D1200014F345 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		79E28D401667D14D001BBCCE /* lassietoverrock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lassietoverrock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E28D441667D14D001BBCCE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		79E28D461667D14D001BBCCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79E28D481667D14D001BBCCE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,14 +184,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DCB5721687D14C0014F345 /* SystemConfiguration.framework in Frameworks */,
+				79DCB565168731D40014F345 /* MapKit.framework in Frameworks */,
 				EB1DD384166F71260013EABB /* Accounts.framework in Frameworks */,
 				EB1DD382166F6FF80013EABB /* Social.framework in Frameworks */,
-				79E28DE21668C08C001BBCCE /* MapKit.framework in Frameworks */,
 				79E28DE01668BB12001BBCCE /* ImageIO.framework in Frameworks */,
 				79E28D451667D14D001BBCCE /* UIKit.framework in Frameworks */,
 				79E28D471667D14D001BBCCE /* Foundation.framework in Frameworks */,
 				79E28D491667D14D001BBCCE /* CoreGraphics.framework in Frameworks */,
 				79E28D4B1667D14D001BBCCE /* CoreData.framework in Frameworks */,
+				79DCB5731687D1780014F345 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +224,20 @@
 			name = FAQ;
 			sourceTree = "<group>";
 		};
+		79DCB5681687CE860014F345 /* GA */ = {
+			isa = PBXGroup;
+			children = (
+				79DCB5691687CEA60014F345 /* GAI.h */,
+				79DCB56A1687CEA60014F345 /* GAITrackedViewController.h */,
+				79DCB56B1687CEA60014F345 /* GAITracker.h */,
+				79DCB56C1687CEA60014F345 /* GAITransaction.h */,
+				79DCB56D1687CEA60014F345 /* GAITransactionItem.h */,
+				79DCB56E1687CEA60014F345 /* libGoogleAnalytics_debug.a */,
+				79DCB56F1687CEA60014F345 /* libGoogleAnalytics.a */,
+			);
+			name = GA;
+			sourceTree = "<group>";
+		};
 		79E28D351667D14D001BBCCE = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +250,7 @@
 		79E28D411667D14D001BBCCE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79E28D401667D14D001BBCCE /* Lassie.app */,
+				79E28D401667D14D001BBCCE /* lassietoverrock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +258,8 @@
 		79E28D431667D14D001BBCCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79DCB5701687D1200014F345 /* SystemConfiguration.framework */,
+				79DCB55F1687308B0014F345 /* QuartzCore.framework */,
 				79C0B34E1680BAF3007C2FCC /* CoreLocation.framework */,
 				EB1DD383166F71260013EABB /* Accounts.framework */,
 				EB1DD381166F6FF80013EABB /* Social.framework */,
@@ -244,9 +276,12 @@
 		79E28D4C1667D14D001BBCCE /* Lassie ToverRock */ = {
 			isa = PBXGroup;
 			children = (
+				79DCB5681687CE860014F345 /* GA */,
 				79E28DC21668B6FA001BBCCE /* SDWebImage */,
 				79E28D551667D14D001BBCCE /* AppDelegate.h */,
 				79E28D561667D14D001BBCCE /* AppDelegate.m */,
+				79DCB55816872D480014F345 /* DejalActivityView.h */,
+				79DCB55916872D480014F345 /* DejalActivityView.m */,
 				79E28D661667D1D4001BBCCE /* SplashViewController.h */,
 				79E28D671667D1D4001BBCCE /* SplashViewController.m */,
 				79E28DAF1667F1E1001BBCCE /* ProgrammaViewController.h */,
@@ -383,7 +418,7 @@
 			);
 			name = "Lassie ToverRock";
 			productName = "Lassie ToverRock";
-			productReference = 79E28D401667D14D001BBCCE /* Lassie.app */;
+			productReference = 79E28D401667D14D001BBCCE /* lassietoverrock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -395,7 +430,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Richard van der Meer";
 			};
-			buildConfigurationList = 79E28D3A1667D14D001BBCCE /* Build configuration list for PBXProject "Lassie" */;
+			buildConfigurationList = 79E28D3A1667D14D001BBCCE /* Build configuration list for PBXProject "lassietoverrock" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -449,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DCB567168733840014F345 /* DejalActivityView.m in Sources */,
 				79E28D531667D14D001BBCCE /* main.m in Sources */,
 				79E28D571667D14D001BBCCE /* AppDelegate.m in Sources */,
 				79E28D681667D1D4001BBCCE /* SplashViewController.m in Sources */,
@@ -493,6 +529,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		79502D1F1687D99500E1CB67 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		79502D201687D99500E1CB67 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lassie ToverRock/Lassie ToverRock-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "/usr/include/libxml2/**";
+				INFOPLIST_FILE = "Lassie ToverRock/Lassie ToverRock-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Lassie ToverRock\"",
+				);
+				PRODUCT_NAME = lassietoverrock;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = AppStore;
+		};
 		79E28D611667D14D001BBCCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -539,22 +622,25 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};
 		79E28D641667D14D001BBCCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Lassie ToverRock/grabKit/externalLibraries/Facebook\"",
-				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lassie ToverRock/Lassie ToverRock-Prefix.pch";
 				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 				INFOPLIST_FILE = "Lassie ToverRock/Lassie ToverRock-Info.plist";
-				PRODUCT_NAME = Lassie;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Lassie ToverRock\"",
+				);
+				PRODUCT_NAME = lassietoverrock;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -564,16 +650,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Lassie ToverRock/grabKit/externalLibraries/Facebook\"",
-				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lassie ToverRock/Lassie ToverRock-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "/usr/include/libxml2/**";
 				INFOPLIST_FILE = "Lassie ToverRock/Lassie ToverRock-Info.plist";
-				PRODUCT_NAME = Lassie;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Lassie ToverRock\"",
+				);
+				PRODUCT_NAME = lassietoverrock;
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -582,11 +671,12 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79E28D3A1667D14D001BBCCE /* Build configuration list for PBXProject "Lassie" */ = {
+		79E28D3A1667D14D001BBCCE /* Build configuration list for PBXProject "lassietoverrock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79E28D611667D14D001BBCCE /* Debug */,
 				79E28D621667D14D001BBCCE /* Release */,
+				79502D1F1687D99500E1CB67 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -596,6 +686,7 @@
 			buildConfigurations = (
 				79E28D641667D14D001BBCCE /* Debug */,
 				79E28D651667D14D001BBCCE /* Release */,
+				79502D201687D99500E1CB67 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,6 +10,7 @@
 #import "BandModel.h"
 #import "BandViewController.h"
 #import "BandCellViewController.h"
+#import "GAI.h"
 
 @interface ProgrammaViewController ()
 
@@ -37,6 +38,19 @@
 {
     [super viewDidLoad];
 	
+	id<GAITracker> googleTracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-28275692-2"];
+	[googleTracker trackView:@"Programma"];
+	
+	[self reloadProgramma];
+	
+	UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+	[refreshControl addTarget:self action:@selector(reloadProgramma)
+			 forControlEvents:UIControlEventValueChanged];
+	self.refreshControl = refreshControl;
+}
+
+-(void)reloadProgramma
+{
 	NSData *programmaData = [NSData dataWithContentsOfURL: [NSURL URLWithString:@"http://www.lassietoverrock.nl/app/bands.php"] options:NSDataReadingUncached error:nil];
 	
 	NSDictionary *json = nil;
@@ -50,9 +64,12 @@
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[self updateUIWithDictionary: json];
 	});
+	
+	[self.refreshControl endRefreshing];
 }
 
 -(void)updateUIWithDictionary:(NSDictionary*)json {
+	[programma removeAllObjects];
 	@try {
 		for (int i = 0; i < [json[@"bands"] count]; i++) {
 			BandModel *band = [[BandModel alloc] init];

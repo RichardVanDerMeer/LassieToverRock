@@ -7,6 +7,7 @@
 //
 
 #import "LocationViewController.h"
+#import "GAI.h"
 
 @interface LocationViewController ()
 
@@ -30,6 +31,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	
+	id<GAITracker> googleTracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-28275692-2"];
+	[googleTracker trackView:@"Locatie"];
 	
 	UITextView *title = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, self.view.bounds.size.width - 20, 40)];
 	[title setFont:[UIFont boldSystemFontOfSize:16.0f ]];
